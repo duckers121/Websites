@@ -1,1 +1,460 @@
-... etc
+/*
+ * Union High School — modern, accessible school-site theme
+ * Works with semantic HTML and common header/nav/main/card layouts.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  color-scheme: light;
+  --color-ink: #17212b;
+  --color-muted: #586879;
+  --color-primary: #164e63;
+  --color-primary-dark: #103c4c;
+  --color-accent: #e8a12a;
+  --color-paper: #ffffff;
+  --color-canvas: #f3f6f8;
+  --color-border: #dce4e9;
+  --color-success: #24734d;
+  --radius-sm: 0.65rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --shadow-card: 0 12px 34px rgb(23 33 43 / 8%);
+  --shadow-hover: 0 18px 42px rgb(23 33 43 / 13%);
+  --content-width: 1160px;
+  --page-gutter: clamp(1rem, 4vw, 2.5rem);
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--color-ink);
+  background: var(--color-canvas);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  color: var(--color-ink);
+  background: #ffe2a8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.7em;
+  color: var(--color-ink);
+  font-family: Manrope, "Segoe UI", sans-serif;
+  font-weight: 800;
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+h1 { font-size: clamp(2.4rem, 6vw, 4.7rem); letter-spacing: -0.055em; }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); letter-spacing: -0.04em; }
+h3 { font-size: clamp(1.2rem, 2vw, 1.55rem); letter-spacing: -0.025em; }
+p { margin: 0 0 1rem; }
+
+/* Shared page layout */
+.container,
+.wrapper,
+.content,
+main,
+header > .inner,
+footer > .inner {
+  width: min(var(--content-width), calc(100% - var(--page-gutter) * 2));
+  margin-inline: auto;
+}
+
+main {
+  min-height: 55vh;
+  padding-block: clamp(2rem, 5vw, 4.5rem);
+}
+
+section {
+  margin-block: clamp(2rem, 5vw, 4.5rem);
+}
+
+/* School identity and navigation */
+body > header,
+.site-header,
+header[role="banner"] {
+  position: relative;
+  z-index: 10;
+  color: white;
+  background: var(--color-primary);
+  box-shadow: 0 4px 18px rgb(16 60 76 / 16%);
+}
+
+header .inner,
+.site-header .container,
+header[role="banner"] .container {
+  display: flex;
+  min-height: 5.25rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+header h1,
+header h2,
+header h3,
+.site-title,
+.logo {
+  margin: 0;
+  color: inherit;
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+}
+
+header a,
+.site-header a,
+header[role="banner"] a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav ul,
+.nav-links,
+.navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a,
+.nav-links a,
+.navigation a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  color: inherit;
+  font-size: 0.94rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+nav a:hover,
+nav a[aria-current="page"],
+.nav-links a:hover,
+.navigation a:hover {
+  color: white;
+  background: rgb(255 255 255 / 15%);
+}
+
+/* Intro / hero area */
+.hero,
+.banner,
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  min-height: clamp(300px, 42vw, 520px);
+  align-items: center;
+  padding: clamp(2.5rem, 8vw, 6rem) var(--page-gutter);
+  color: white;
+  background:
+    linear-gradient(105deg, rgb(10 42 55 / 88%), rgb(22 78 99 / 62%) 60%, rgb(22 78 99 / 35%)),
+    linear-gradient(135deg, #164e63, #267184);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.hero > *,
+.banner > *,
+.page-hero > * {
+  width: min(var(--content-width), 100%);
+  margin-inline: auto;
+}
+
+.hero h1,
+.banner h1,
+.page-hero h1,
+.hero h2,
+.banner h2,
+.page-hero h2 {
+  max-width: 15ch;
+  color: white;
+}
+
+.hero p,
+.banner p,
+.page-hero p {
+  max-width: 58ch;
+  color: rgb(255 255 255 / 88%);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+/* Buttons and calls to action */
+button,
+.button,
+.btn,
+input[type="submit"] {
+  display: inline-flex;
+  min-height: 2.9rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.15rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: white;
+  background: var(--color-primary);
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+button:hover,
+.button:hover,
+.btn:hover,
+input[type="submit"]:hover {
+  color: white;
+  background: var(--color-primary-dark);
+  box-shadow: 0 8px 20px rgb(16 60 76 / 18%);
+  transform: translateY(-1px);
+}
+
+.button-secondary,
+.btn-secondary {
+  color: var(--color-primary);
+  border-color: var(--color-border);
+  background: white;
+}
+
+/* News, quick links, and other reusable content cards */
+.cards,
+.card-grid,
+.grid,
+.quick-links,
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.card,
+article,
+.quick-link,
+.news-item,
+.notice,
+.tile {
+  padding: clamp(1.2rem, 2.5vw, 1.8rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-paper);
+  box-shadow: var(--shadow-card);
+}
+
+.card,
+.quick-link,
+.news-item,
+.tile {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover,
+.quick-link:hover,
+.news-item:hover,
+.tile:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+.card img,
+article img,
+.news-item img {
+  width: calc(100% + clamp(2.4rem, 5vw, 3.6rem));
+  max-width: none;
+  height: 190px;
+  margin: calc(clamp(1.2rem, 2.5vw, 1.8rem) * -1);
+  margin-bottom: 1.3rem;
+  object-fit: cover;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.card h2,
+.card h3,
+article h2,
+article h3 {
+  margin-bottom: 0.55rem;
+}
+
+/* Forms and data tables */
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 2.8rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #bdcbd4;
+  border-radius: var(--radius-sm);
+  color: var(--color-ink);
+  background: white;
+}
+
+textarea { min-height: 9rem; resize: vertical; }
+input:focus,
+select:focus,
+textarea:focus { border-color: var(--color-primary); }
+
+.table-wrap { overflow-x: auto; border-radius: var(--radius-sm); }
+table { width: 100%; border-collapse: collapse; background: white; }
+th,
+td { padding: 0.8rem 1rem; border-bottom: 1px solid var(--color-border); text-align: left; }
+th { color: white; background: var(--color-primary); }
+
+/* Footer */
+body > footer,
+.site-footer,
+footer[role="contentinfo"] {
+  padding: clamp(2.5rem, 5vw, 4rem) var(--page-gutter);
+  color: rgb(255 255 255 / 82%);
+  background: #102f3b;
+}
+
+footer h2,
+footer h3,
+footer strong { color: white; }
+footer a { color: white; }
+footer > .inner { width: 100%; max-width: var(--content-width); }
+
+/* Utility styles */
+.eyebrow,
+.kicker {
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.badge,
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  color: var(--color-primary-dark);
+  background: #e5f1f3;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.muted,
+.text-muted { color: var(--color-muted); }
+
+@media (max-width: 720px) {
+  header .inner,
+  .site-header .container,
+  header[role="banner"] .container {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-block: 1rem;
+  }
+
+  nav ul,
+  .nav-links,
+  .navigation ul {
+    gap: 0.15rem;
+  }
+
+  nav a,
+  .nav-links a,
+  .navigation a {
+    min-height: 2.5rem;
+    padding-inline: 0.65rem;
+    font-size: 0.9rem;
+  }
+
+  .hero,
+  .banner,
+  .page-hero {
+    min-height: 340px;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
