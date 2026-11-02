@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Union High School | Clinton, NC</title>
+    <meta name="description" content="Union High School in Clinton, North Carolina — a welcoming place where students grow, lead, and thrive." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --midnight: #0b1020;
+        --navy: #111b3c;
+        --royal: #2f5ef7;
+        --violet: #7c3aed;
+        --cyan: #67e8f9;
+        --gold: #f5c451;
+        --paper: #f9fafb;
+        --ink: #1f2937;
+        --muted: #5b6475;
+        --line: rgba(148, 163, 184, 0.22);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(180deg, #f7f8ff 0%, #eef4ff 50%, #f8fafc 100%);
+        color: var(--ink);
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #7c3aed 0%, #2563eb 50%, #22d3ee 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+      }
+
+      .grid-bg {
+        background-image:
+          linear-gradient(rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+        background-size: 52px 52px;
+        mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
+      }
+
+      .wave {
+        position: absolute;
+        inset: auto 0 -1px 0;
+        height: 120px;
+        background: linear-gradient(180deg, rgba(14, 116, 144, 0), rgba(15, 23, 42, 0.05));
+      }
+
+      .glow-button {
+        background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+        box-shadow: 0 20px 40px rgba(79, 70, 229, 0.28);
+      }
+
+      .gold-ring {
+        box-shadow: 0 0 0 8px rgba(245, 196, 81, 0.12), 0 20px 35px rgba(15, 23, 42, 0.12);
+      }
+
+      .image-card {
+        background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(37, 99, 235, 0.08));
+      }
+
+      .soft-shadow {
+        box-shadow: 0 25px 55px rgba(15, 23, 42, 0.12);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="relative overflow-hidden">
+      <div class="grid-bg pointer-events-none absolute inset-0"></div>
+      <header class="relative z-20 mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8">
+        <div class="glass flex items-center justify-between rounded-full px-4 py-3 sm:px-6">
+          <div class="flex items-center gap-3">
+            <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-600 to-blue-600 text-xl text-white shadow-lg shadow-violet-500/30">
+              U
+            </div>
+            <div>
+              <div class="text-xs font-bold uppercase tracking-[0.2em] text-violet-600">Clinton, NC</div>
+              <div class="text-lg font-extrabold tracking-tight text-slate-900">Union High School</div>
+            </div>
+          </div>
+
+          <nav class="hidden items-center gap-8 text-sm font-semibold text-slate-700 md:flex">
+            <a href="#about" class="transition hover:text-violet-600">About</a>
+            <a href="#academics" class="transition hover:text-violet-600">Academics</a>
+            <a href="#athletics" class="transition hover:text-violet-600">Athletics</a>
+            <a href="#community" class="transition hover:text-violet-600">Community</a>
+            <a href="#contact" class="transition hover:text-violet-600">Contact</a>
+          </nav>
+
+          <a href="#contact" class="glow-button rounded-full px-5 py-3 text-sm font-bold text-white hover:scale-[1.02] transition-transform">
+            Enroll Now
+          </a>
+        </div>
+      </header>
+
+      <main class="relative z-10">
+        <section class="mx-auto max-w-7xl px-4 pb-18 pt-10 sm:px-6 lg:px-8 lg:pt-16">
+          <div class="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+            <div>
+              <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50 px-4 py-2 text-sm font-semibold text-violet-700">
+                <span>✨</span>
+                Excellence. Opportunity. Pride.
+              </div>
+
+              <h1 class="max-w-xl text-4xl font-black tracking-[-0.06em] text-slate-900 sm:text-5xl lg:text-7xl">
+                Growing tomorrow’s leaders in
+                <span class="gradient-text">Clinton, NC.</span>
+              </h1>
+
+              <p class="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+                Union High School is a place where students are challenged to think deeply, lead with confidence,
+                and discover their strengths through academics, arts, athletics, and meaningful community connections.
+              </p>
+
+              <div class="mt-8 flex flex-wrap items-center gap-4">
+                <a href="#about" class="glow-button rounded-full px-6 py-4 text-base font-bold text-white transition hover:scale-[1.02]">
+                  Explore Our School
+                </a>
+                <a href="#community" class="rounded-full border border-slate-200 bg-white px-6 py-4 text-base font-bold text-slate-800 transition hover:border-violet-200 hover:text-violet-700">
+                  Meet Our Community
+                </a>
+              </div>
+
+              <div class="mt-10 flex flex-wrap gap-8 text-left">
+                <div>
+                  <div class="text-3xl font-black tracking-tight text-slate-900">1:16</div>
+                  <div class="mt-1 text-sm font-medium text-slate-500">Student-to-teacher ratio</div>
+                </div>
+                <div>
+                  <div class="text-3xl font-black tracking-tight text-slate-900">25+</div>
+                  <div class="mt-1 text-sm font-medium text-slate-500">Programs & pathways</div>
+                </div>
+                <div>
+                  <div class="text-3xl font-black tracking-tight text-slate-900">95%</div>
+                  <div class="mt-1 text-sm font-medium text-slate-500">Graduation focus</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="image-card soft-shadow relative overflow-hidden rounded-[32px] border border-violet-100 p-4">
+                <div class="absolute inset-x-10 top-8 h-20 rounded-full bg-violet-300/30 blur-3xl"></div>
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+                  alt="Students collaborating at school"
+                  class="h-[560px] w-full rounded-[28px] object-cover"
+                />
+                <div class="gold-ring absolute -bottom-7 left-8 rounded-2xl bg-white px-5 py-4 text-left shadow-xl">
+                  <div class="text-xs font-bold uppercase tracking-[0.18em] text-violet-600">Student life</div>
+                  <div class="mt-2 text-2xl font-black text-slate-900">#ProudToBeUnion</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+          <div class="mb-12 text-center">
+            <p class="text-sm font-bold uppercase tracking-[0.22em] text-violet-600">About our school</p>
+            <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">A welcoming place to learn, lead, and belong.</h2>
+          </div>
+
+          <div class="grid gap-8 lg:grid-cols-3">
+            <div class="glass rounded-[28px] p-7 soft-shadow">
+              <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-600 to-blue-600 text-2xl text-white">📚</div>
+              <h3 class="text-xl font-black text-slate-900">Academic Excellence</h3>
+              <p class="mt-4 text-base leading-7 text-slate-600">
+                Students build strong foundations in core subjects while thriving in honors, dual-enrollment, and career-focused learning opportunities.
+              </p>
+            </div>
+
+            <div class="glass rounded-[28px] p-7 soft-shadow">
+              <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-500 text-2xl text-white">🎨</div>
+              <h3 class="text-xl font-black text-slate-900">Creative Growth</h3>
+              <p class="mt-4 text-base leading-7 text-slate-600">
+                Our arts, communication, and project-based experiences help students discover their voice and express their ideas with confidence.
+              </p>
+            </div>
+
+            <div class="glass rounded-[28px] p-7 soft-shadow">
+              <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-2xl text-white">🏅</div>
+              <h3 class="text-xl font-black text-slate-900">Strong Character</h3>
+              <p class="mt-4 text-base leading-7 text-slate-600">
+                From athletics to service learning, we encourage students to lead with integrity, resilience, and a heart for community.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="academics" class="bg-slate-950 text-white">
+          <div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+            <div class="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+              <div>
+                <p class="text-sm font-bold uppercase tracking-[0.2em] text-violet-300">Academics</p>
+                <h2 class="mt-4 text-3xl font-black tracking-tight sm:text-4xl">Learning experiences built for real futures.</h2>
+                <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+                  Union High School helps students prepare for college, trade pathways, military service, and meaningful careers through supportive instruction and hands-on learning.
+                </p>
+                <div class="mt-8 space-y-5">
+                  <div class="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/20 text-xl">✅</span>
+                    <div>
+                      <h3 class="text-lg font-bold">Rigorous coursework</h3>
+                      <p class="mt-1 text-slate-300">Strong core academics, honors coursework, and preparation for the next step.</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/20 text-xl">🛠️</span>
+                    <div>
+                      <h3 class="text-lg font-bold">Career pathways</h3>
+                      <p class="mt-1 text-slate-300">Hands-on experiences that connect classroom learning with future careers and success.</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/20 text-xl">🤝</span>
+                    <div>
+                      <h3 class="text-lg font-bold">Student support</h3>
+                      <p class="mt-1 text-slate-300">Guidance counselors, dedicated teachers, and mentorship help every student thrive.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid gap-6 sm:grid-cols-2">
+                <div class="rounded-[28px] border border-violet-500/20 bg-gradient-to-br from-violet-500/20 to-blue-500/10 p-6">
+                  <div class="text-4xl font-black text-white">12+</div>
+                  <div class="mt-3 text-lg font-semibold text-violet-100">Core subjects</div>
+                  <p class="mt-2 text-sm leading-6 text-slate-300">Courses designed to strengthen knowledge, critical thinking, and future readiness.</p>
+                </div>
+                <div class="rounded-[28px] border border-cyan-400/20 bg-gradient-to-br from-cyan-500/15 to-blue-500/10 p-6">
+                  <div class="text-4xl font-black text-white">4</div>
+                  <div class="mt-3 text-lg font-semibold text-cyan-100">Career clusters</div>
+                  <p class="mt-2 text-sm leading-6 text-slate-300">Pathways helping students explore growth in both academics and practical skills.</p>
+                </div>
+                <div class="rounded-[28px] border border-amber-300/20 bg-gradient-to-br from-amber-400/10 to-orange-500/10 p-6 sm:col-span-2">
+                  <div class="text-4xl font-black text-white">100%</div>
+                  <div class="mt-3 text-lg font-semibold text-amber-100">Future-focused</div>
+                  <p class="mt-2 text-sm leading-6 text-slate-300">Students graduate with a foundation for college, work, or military service—and the confidence to pursue their goals.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="athletics" class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+          <div class="mb-12 text-center">
+            <p class="text-sm font-bold uppercase tracking-[0.22em] text-violet-600">Athletics & activities</p>
+            <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">Pride, teamwork, and unforgettable memories.</h2>
+          </div>
+
+          <div class="grid gap-8 md:grid-cols-3">
+            <div class="overflow-hidden rounded-[28px] bg-white shadow-xl shadow-slate-200/60">
+              <img src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?auto=format&fit=crop&w=900&q=80" alt="Students playing basketball" class="h-60 w-full object-cover" />
+              <div class="p-6">
+                <div class="text-sm font-bold uppercase tracking-[0.18em] text-violet-600">Athletics</div>
+                <h3 class="mt-3 text-2xl font-black text-slate-900">Game day energy</h3>
+                <p class="mt-3 text-slate-600">From basketball to track and field, our student-athletes grow confidence, discipline, and team spirit.</p>
+              </div>
+            </div>
+
+            <div class="overflow-hidden rounded-[28px] bg-white shadow-xl shadow-slate-200/60">
+              <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="Students performing music and arts" class="h-60 w-full object-cover" />
+              <div class="p-6">
+                <div class="text-sm font-bold uppercase tracking-[0.18em] text-violet-600">Arts</div>
+                <h3 class="mt-3 text-2xl font-black text-slate-900">Creative expression</h3>
+                <p class="mt-3 text-slate-600">Students explore music, performance, design, and the arts in ways that build confidence and imagination.</p>
+              </div>
+            </div>
+
+            <div class="overflow-hidden rounded-[28px] bg-white shadow-xl shadow-slate-200/60">
+              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80" alt="Students in a leadership meeting" class="h-60 w-full object-cover" />
+              <div class="p-6">
+                <div class="text-sm font-bold uppercase tracking-[0.18em] text-violet-600">Leadership</div>
+                <h3 class="mt-3 text-2xl font-black text-slate-900">Leading with purpose</h3>
+                <p class="mt-3 text-slate-600">Our clubs, teams, and service initiatives help students build character, confidence, and a strong sense of belonging.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="community" class="bg-gradient-to-b from-violet-50 to-white">
+          <div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+            <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+              <div>
+                <p class="text-sm font-bold uppercase tracking-[0.22em] text-violet-600">Community</p>
+                <h2 class="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">Built on family, service, and belonging.</h2>
+                <p class="mt-6 text-lg leading-8 text-slate-600">
+                  Union High School is more than a campus—it is a community rooted in partnership and pride. Families, faculty, and students work together to create a place where every learner can rise.
+                </p>
+                <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                  <div class="rounded-2xl border border-violet-100 bg-white p-5">
+                    <div class="text-3xl font-black text-violet-600">500+</div>
+                    <div class="mt-2 text-slate-700">Students served each year</div>
+                  </div>
+                  <div class="rounded-2xl border border-blue-100 bg-white p-5">
+                    <div class="text-3xl font-black text-blue-600">20+</div>
+                    <div class="mt-2 text-slate-700">Organizations & clubs</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rounded-[32px] bg-slate-900 p-8 text-white soft-shadow">
+                <div class="mb-6 flex items-center gap-3">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-blue-500 text-xl">★</div>
+                  <div>
+                    <div class="text-sm font-bold uppercase tracking-[0.18em] text-violet-200">Parent perspective</div>
+                    <div class="text-lg font-black">“A place where our children feel seen.”</div>
+                  </div>
+                </div>
+                <p class="text-lg leading-8 text-slate-200">
+                  “The teachers care deeply, the programs challenge students in the best ways, and our school community truly feels like a family. Our children are encouraged to grow academically and personally.”
+                </p>
+                <div class="mt-8 border-t border-white/10 pt-6 text-sm text-slate-300">— Union High School family member</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+          <div class="rounded-[32px] bg-gradient-to-r from-violet-700 via-blue-700 to-cyan-600 p-10 text-white shadow-[0_35px_90px_rgba(59,130,246,0.35)] sm:p-14">
+            <div class="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
+              <div>
+                <p class="text-sm font-bold uppercase tracking-[0.2em] text-violet-100">Ready to join us?</p>
+                <h2 class="mt-4 text-3xl font-black tracking-tight sm:text-4xl">Start your next chapter at Union High School.</h2>
+                <p class="mt-4 max-w-xl text-lg leading-8 text-violet-50">
+                  Discover a school experience that helps students grow with confidence, purpose, and pride in Clinton, North Carolina.
+                </p>
+              </div>
+              <div class="flex flex-col gap-4 sm:flex-row lg:flex-col">
+                <a href="mailto:admissions@unionhighschool.org" class="rounded-full bg-white px-7 py-4 text-center text-base font-bold text-violet-700 transition hover:scale-[1.02]">
+                  Contact Admissions
+                </a>
+                <a href="tel:+19195551234" class="rounded-full border border-white/40 bg-white/10 px-7 py-4 text-center text-base font-bold text-white transition hover:bg-white/15">
+                  (919) 555-1234
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="relative z-10 border-t border-slate-200 bg-white/80">
+        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-8 text-center text-sm text-slate-600 sm:flex-row sm:text-left sm:px-6 lg:px-8">
+          <div>
+            <span class="font-black text-slate-900">Union High School</span>
+            <span class="mx-2">•</span>
+            <span>Clinton, North Carolina</span>
+          </div>
+          <div>Building futures with purpose and pride.</div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
